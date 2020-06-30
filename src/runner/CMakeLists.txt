@@ -1,0 +1,12 @@
+set(LEXER-RUNNER_TARGET_NAME runner)
+
+add_executable(${LEXER-RUNNER_TARGET_NAME} main.cpp)
+
+target_link_libraries(${LEXER-RUNNER_TARGET_NAME}
+	PRIVATE
+		core
+)
+
+install(TARGETS ${LEXER-RUNNER_TARGET_NAME}
+	EXPORT ${LEXER_EXPORT_NAME}
+)
